@@ -1,8 +1,13 @@
-let likeCount = localStorage.getItem('likeCount') || 0;
-document.getElementById('likeCounter').innerText = likeCount;
+let dayCounter = 0;
 
-function incrementLikes() {
-  likeCount++;
-  document.getElementById('likeCounter').innerText = likeCount;
-  localStorage.setItem('likeCount', likeCount);
+function incrementDayCounter() {
+  dayCounter += 1;
+  document.getElementById('dayCounter').innerText = dayCounter;
+}
+
+function goBackToPreviousDay() {
+  if (dayCounter > 0) {
+    dayCounter -= 1;
+    document.getElementById('dayCounter').innerText = dayCounter;
+  }
 }

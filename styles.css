@@ -1,55 +1,59 @@
-/* Global Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #e5e5be; /* Gives an off-white/paper-like background */
 }
 
 .container {
-  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f0eaff; /* Purple background color */
+  background-color: #fcf8e8;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Center align all text */
+  width: 70vw; /* Reduced width to make it more like a diary */
+  min-height: 90vh; /* Minimum height for the diary look */
+  display: flex;
+  flex-direction: column; /* Aligns all elements in a column */
+  align-items: start; /* Aligns elements to the left */
 }
 
-h1 {
-  color: #6a0dad; /* Purple heading color */
-}
-
+h1,
 h2 {
   color: #333;
 }
 
 ul {
   list-style-type: none;
-  padding: 0; /* Remove default padding */
-}
-
-a {
-  color: #6a0dad; /* Purple link color */
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
+  padding-left: 20px; /* Padding so bullet points don't stick to the left */
 }
 
 img {
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 120px;
+  align-self: center; /* Positions image in the center */
 }
 
-/* Media Query for Responsive Design */
+a {
+  color: #333; /* Change link color to match other text */
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px 10px; /* Additional padding for better appearance */
+  background-color: #c5c3c6; /* Neutral button color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a4a2a5; /* Darker shade on hover */
+}
+
+/* Responsive Design Adaption */
 @media only screen and (max-width: 600px) {
   .container {
-    padding: 15px; /* Add padding */
+    width: 80vw; /* Adjust width for smaller screens */
   }
 
   img {
